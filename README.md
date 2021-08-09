@@ -2,6 +2,8 @@
 
 The classic game of Snake built for Linux!
 
+~![til](https://raw.githubusercontent.com/alecntan/snaCe/main/media/Snake_Game.gif)
+
 
 ## Requirements
 1. GCC and Make (See installation instructions for your Linux Distro. )
