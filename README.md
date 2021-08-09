@@ -1,4 +1,4 @@
-# Snake the Game
+# SnaCe
 
 The classic game of Snake using C!
 
