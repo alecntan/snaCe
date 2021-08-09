@@ -12,7 +12,7 @@ The classic game of Snake using C!
 ## Installation
 To install:
 1. Install pre-requisite software (See **Requirements**)
-2. Clone/download Snake_the_Game
+2. Clone/download snaCe
 3. Run the `make` command on the same directory as the repo
 4. Run `run_snake`
 
