@@ -1,6 +1,6 @@
 # Snake the Game
 
-The classic game of Snake built for Linux!
+The classic game of Snake using C!
 
 ![til](https://raw.githubusercontent.com/alecntan/snaCe/main/media/Snake_Game.gif)
 
