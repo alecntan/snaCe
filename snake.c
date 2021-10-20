@@ -136,14 +136,11 @@ int hit_itself(Snake *snake) {
 	return 0;
 }
 
-void print_snake(Snake *snake) {
-
-	printf("Length: %d\n", snake->length);
-	SnakeCell *currCell = snake->head;
-	int currCount = 1;
-	while( currCell != NULL) {
-		printf("Cell %d: X: %d Y: %d\n", currCount, currCell->rect->x, currCell->rect->y);
-		++currCount;
-		currCell = currCell->next;
-	}
+int pos_y(Snake *snake) {
+	return snake->head->rect->y;
 }
+
+int pos_x(Snake *snake) {
+	return snake->head->rect->x;
+}
+

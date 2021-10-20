@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <SDL2/SDL.h>
+#include "snake.h"
 #include "controller.h"
 #include "view.h"
-#include "snake.h"
 #include "food.h"
 
 

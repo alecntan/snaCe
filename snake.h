@@ -38,6 +38,8 @@ void change_dir(Snake *snake, int x_dir, int y_dir);
 
 void grow_snake(Snake *snake);
 
-void print_snake(Snake *snake);
+int pos_y(Snake *snake);
+
+int pos_x(Snake *snake);
 
 int hit_itself(Snake *snake);

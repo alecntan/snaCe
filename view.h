@@ -26,12 +26,6 @@ void draw_snake(View *view, Snake *snake);
 
 void update_view(View *view, Snake *snake, Food *food);
 
-int pos_y(Snake *snake);
-
-int pos_x(Snake *snake);
-
 void draw_food(View *view, Food *food);
-
-void change_food_pos(Food *food, Snake *snake);
 
 int is_hit_wall(Snake *snake);

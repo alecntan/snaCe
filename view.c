@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdlib.h>
 #include "food.h"
-#include "view.h"
 #include "snake.h"
+#include "view.h"
 #include "controller.h"
 
 
@@ -30,10 +30,7 @@ View *init_view(void) {
 		return NULL;
 	}
 
-	view->renderer = SDL_CreateRenderer(view->window,
-								                      -1,
-																			SDL_RENDERER_ACCELERATED
-																			);
+	view->renderer = SDL_CreateRenderer(view->window, -1, SDL_RENDERER_ACCELERATED );
 	return view;
 }
 
@@ -49,7 +46,6 @@ void draw_snake(View *view, Snake *snake) {
 		}
 		curr_cell = curr_cell->next;
 	}
-	//SDL_RenderPresent(view->renderer);
 }
 
 void draw_food(View *view, Food *food){
@@ -61,27 +57,7 @@ void draw_food(View *view, Food *food){
 	}
 
 	SDL_SetRenderDrawColor(view->renderer, 255, 255, 255, 255);
-	//SDL_RenderPresent(view->renderer);
 }
-
-
-void change_food_pos(Food *food, Snake *snake) {
-
-	srand(time(NULL));
-  int new_y = rand() % WINDOW_HEIGHT;
-	while( new_y == 0 || new_y == WINDOW_HEIGHT || new_y == pos_y(snake)){
-		new_y = rand() % (WINDOW_HEIGHT - 150);
-	}
-
-	int new_x = rand() % WINDOW_WIDTH;
-	while( new_x == 0 || new_y == WINDOW_WIDTH || new_y == pos_x(snake)) {
-		new_x = rand() % (WINDOW_WIDTH - 150);
-	}
-
-	food->x = new_x;
-	food->y = new_y;
-}
-
 
 void update_view(View *view, Snake *snake, Food *food) {
 
@@ -96,7 +72,6 @@ void update_view(View *view, Snake *snake, Food *food) {
 		change_food_pos(food, snake);
 	}
 
-	//change_food_pos(food, snake);
 	draw_food(view, food);
 
 	SnakeCell *curr_cell = snake->head;
@@ -113,14 +88,6 @@ void update_view(View *view, Snake *snake, Food *food) {
 	SDL_RenderPresent(view->renderer);
 }
 
-
-int pos_y(Snake *snake) {
-	return snake->head->rect->y;
-}
-
-int pos_x(Snake *snake) {
-	return snake->head->rect->x;
-}
 
 int is_hit_wall(Snake *snake) {
 
