@@ -1,5 +1,6 @@
 #include <SDL2/SDL.h>
 #include "snake.h"
+#include "view.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -142,5 +143,19 @@ int pos_y(Snake *snake) {
 
 int pos_x(Snake *snake) {
 	return snake->head->rect->x;
+}
+
+int is_hit_wall(Snake *snake) {
+
+	int curr_y = pos_y(snake);
+	int curr_x = pos_x(snake);
+
+	if( curr_y < 0 || curr_y > WINDOW_HEIGHT) {
+		return 1;
+	} else if ( curr_x < 0 || curr_x > WINDOW_WIDTH ) {
+		return 1;
+	}
+
+	return 0;
 }
 

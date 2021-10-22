@@ -28,4 +28,3 @@ void update_view(View *view, Snake *snake, Food *food);
 
 void draw_food(View *view, Food *food);
 
-int is_hit_wall(Snake *snake);

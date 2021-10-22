@@ -88,17 +88,3 @@ void update_view(View *view, Snake *snake, Food *food) {
 	SDL_RenderPresent(view->renderer);
 }
 
-
-int is_hit_wall(Snake *snake) {
-
-	int curr_y = pos_y(snake);
-	int curr_x = pos_x(snake);
-
-	if( curr_y < 0 || curr_y > WINDOW_HEIGHT) {
-		return 1;
-	} else if ( curr_x < 0 || curr_x > WINDOW_WIDTH ) {
-		return 1;
-	}
-
-	return 0;
-}

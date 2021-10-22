@@ -43,3 +43,5 @@ int pos_y(Snake *snake);
 int pos_x(Snake *snake);
 
 int hit_itself(Snake *snake);
+
+int is_hit_wall(Snake *snake);
