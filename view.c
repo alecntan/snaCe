@@ -1,10 +1,10 @@
 #include <SDL2/SDL.h>
 #include <time.h>
 #include <stdlib.h>
-#include "food.h"
-#include "snake.h"
+
 #include "view.h"
 #include "controller.h"
+#include "model.h"
 
 
 View *init_view(void) {

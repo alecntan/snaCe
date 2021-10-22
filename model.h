@@ -1,9 +1,6 @@
-#ifndef CELL_CONSTS
-#define SNAKE_WIDTH	20
-#define SNAKE_HEIGHT 20
-#endif
+#define SNAKE_SPEED		10
 
-/// STRUCT DEFINTIONS ///
+/// SNAKE ///
 typedef struct snakeCell {
 	SDL_Rect *rect;
 
@@ -25,9 +22,6 @@ typedef struct snake {
 } Snake;
 
 
-
-/// FUNCTION PROTOTYPES ///
-
 Snake *create_snake(int initPosX, int initPosY);
 
 void destroy_snake(Snake *snake);
@@ -45,3 +39,14 @@ int pos_x(Snake *snake);
 int hit_itself(Snake *snake);
 
 int is_hit_wall(Snake *snake);
+
+
+/// FOOD ///
+typedef SDL_Rect Food;
+
+Food *create_food(void);
+
+void change_food_pos(Food *food, Snake *snake);
+
+void destroy_food(Food *food);
+

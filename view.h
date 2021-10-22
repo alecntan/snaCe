@@ -5,6 +5,13 @@
 #define RECT_WIDTH     20
 #define WINDOW_WIDTH   640
 #define WINDOW_HEIGHT  480
+
+#define SNAKE_WIDTH	20
+#define SNAKE_HEIGHT 20
+
+#define FOOD_WIDTH 5
+#define FOOD_HEIGHT 5
+
 #endif
 
 
