@@ -22,7 +22,6 @@ To install:
 - r                : Restart
 
 ## Future Changes & Fixes
-- Remove the white square that appears on the top left whenever the game starts/restarts
 - Add a start menu
 - Add a scoring system
 - Add music and Sound FX
